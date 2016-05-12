@@ -74,6 +74,10 @@ This is the Magic: The Gathering SDK Javascript implementation. It is a wrapper 
 
 ### Development
 
-Build tasks are in npm scripts.
+- es6 ([babel](https://babeljs.io))
+- [standardjs](http://standardjs.com)
+- [promises](https://www.promisejs.org)
+
+Build tasks are in npm scripts:
 
     npm run

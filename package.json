@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "babel src -d lib && babel test-src -d test && npm run test",
+    "build": "standard \"*src/**/*.js\" && babel src -d lib && babel test-src -d test && npm run test",
     "watch": "nodemon -w src -w test-src -x 'npm run build'",
     "test": "mocha -t 5000"
   },
@@ -19,7 +19,8 @@
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
     "mocha": "^2.4.5",
-    "nodemon": "^1.9.2"
+    "nodemon": "^1.9.2",
+    "standard": "^7.0.1"
   },
   "dependencies": {
     "request-promise": "^3.0.0"
