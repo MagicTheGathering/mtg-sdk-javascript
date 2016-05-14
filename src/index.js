@@ -1,3 +1,5 @@
+const qb = require('./querybuilder.js')
+
 module.exports = {
-  card: require('./card.js')
+  card: qb('cards')
 }

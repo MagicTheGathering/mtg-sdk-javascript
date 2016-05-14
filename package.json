@@ -9,9 +9,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "standard \"*src/**/*.js\" && babel src -d lib && babel test-src -d test && npm run test",
+    "build": "standard \"*src/**/*.js\" && babel src -s -d lib && babel test-src -s -d test && npm run test",
     "watch": "nodemon -w src -w test-src -x 'npm run build'",
-    "test": "mocha -t 5000"
+    "test": "mocha -t 10000"
   },
   "devDependencies": {
     "babel-cli": "^6.8.0",
@@ -23,6 +23,8 @@
     "standard": "^7.0.1"
   },
   "dependencies": {
+    "emitter20": "^1.0.0",
+    "ramda": "^0.21.0",
     "request-promise": "^3.0.0"
   }
 }
