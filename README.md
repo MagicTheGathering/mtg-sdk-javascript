@@ -10,9 +10,36 @@ This is the Magic: The Gathering SDK Javascript implementation. It is a wrapper 
 
     const mtg = require('mtgsdk')
 
-    mtg.card.find(3).then(result => {
+    mtg.card.find(3)
+    .then(result => {
         console.log(result.card.name) // "Black Lotus"
     })
+
+Query cards by any property:
+
+    card.where({ supertypes: 'legendary', subtypes: 'goblin' })
+    .then(cards => {
+        console.log(cards[0].name) // "Squee, Goblin Nabob"
+    })
+
+Retrieve cards across multiple pages of results:
+
+    card.all({ name: 'Squee', pageSize: 1 })
+    .on('data', card => {
+        console.log(card.name)
+    })
+
+    // Will print:
+    // Squee
+    // Squee, Goblin Nabob Avatar
+    // Squee's Toy
+    // Squeeze
+    // Squee, Goblin Nabob
+    // Squee's Embrace
+    // Squee's Revenge
+    // Squee, Goblin Nabob
+    // Squee, Goblin Nabob
+    // (the duplicates are from different sets)
 
 ### Properties
 
