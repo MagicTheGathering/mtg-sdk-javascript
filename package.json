@@ -7,6 +7,7 @@
     "email": "raineorshine@gmail.com",
     "url": "https://github.com/metaraine"
   },
+  "main": "./lib/index.js",
   "license": "MIT",
   "scripts": {
     "build": "standard \"*src/**/*.js\" && babel src -s -d lib && babel test-src -s -d test && npm run test",
