@@ -1,6 +1,6 @@
 {
   "name": "mtgsdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Magic: The Gathering SDK is a javascript wrapper around the MTG API located at magicthegathering.io",
   "author": {
     "name": "Raine Revere",
