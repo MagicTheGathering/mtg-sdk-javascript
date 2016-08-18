@@ -46,40 +46,30 @@ Retrieve cards across multiple pages of results:
 #### Card
 
     name
-    multiverse_id
+    multiverseid
     layout
     names
-    mana_cost
+    manaCost
     cmc
     colors
     type
-    supertypes
+    types
     subtypes
     rarity
     text
     flavor
     artist
     number
-    power
+    power 
     toughness
-    loyalty
-    variations
-    watermark
-    border
-    timeshifted
-    hand
-    life
     reserved
-    release_date
-    starter
     rulings
-    foreign_names
     printings
-    original_text
-    original_type
+    originalText
+    originalType
     legalities
     source
-    image_url
+    imageUrl
     set
     id
 
