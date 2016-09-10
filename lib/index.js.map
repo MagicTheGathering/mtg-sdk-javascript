@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":["qb","require","module","exports","card"],"mappings":";;AAAA,IAAMA,KAAKC,QAAQ,mBAAR,CAAX;;AAEAC,OAAOC,OAAP,GAAiB;AACfC,QAAMJ,GAAG,OAAH;AADS,CAAjB","file":"index.js","sourcesContent":["const qb = require('./querybuilder.js')\n\nmodule.exports = {\n  card: qb('cards')\n}\n"]}
