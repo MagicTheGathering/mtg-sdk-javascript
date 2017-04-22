@@ -5,11 +5,6 @@ const assert = chai.assert
 const { set } = require('../lib/index.js')
 const { pipe, prop } = require('ramda')
 
-set.all({ name: 'limited' })
-.on('data', set => {
-  console.log(set.name)
-})
-
 describe('set', () => {
   describe('find', () => {
     it('returns set', () => {
@@ -44,13 +39,10 @@ describe('set', () => {
   })
 
   describe('where', () => {
-    it('should filter', (done) => {
-      set.where({ border: 'black', name: 'Shadows over Innistrad' }).then(result => {
+    it('should filter', () => {
+      return set.where({ border: 'black', name: 'Shadows over Innistrad' }).then(result => {
         assert.deepEqual(result[0].border, 'black')
         assert.deepEqual(result[0].name, 'Shadows over Innistrad')
-        done()
-      }).catch(err => {
-        if (err) done(err)
       })
     })
   })
