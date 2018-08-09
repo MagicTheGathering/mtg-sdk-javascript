@@ -1,0 +1,12 @@
+
+.FooterContainer {
+ .__color{
+     min-height:44px;
+     &--orange{
+         background-color: $orange;
+     }
+     &--teal{
+        background-color: $teal;
+    }
+ }
+}

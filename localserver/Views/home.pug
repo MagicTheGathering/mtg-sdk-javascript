@@ -1,0 +1,11 @@
+extends layout.pug
+
+block body_content
+    .DemoComponent
+        form(action="/card" method="get")
+            .form-group
+                label(for='id' style="color:white;") Enter Multiverse Id
+                input.form-control(type='number', name='id', value='2')
+            button.btn.btn-primary(type='submit') Search
+
+    

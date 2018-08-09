@@ -1,0 +1,46 @@
+@import 'includes/variables/_screens.scss';
+@import 'includes/variables/_colors.scss';
+html {
+    font-size: 16px;
+    font-size: 100%;
+    height: 100%;
+    body {
+        overflow-x: hidden;
+        overflow-y: visible;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed !important;
+        background-position: center center;
+        background-size: cover;
+        background-image: url("https://wallpaper.wiki/wp-content/uploads/2017/05/wallpaper.wiki-Free-HD-Desktop-Mtg-Pictures-Download-PIC-WPE008081.jpg");
+        @import 'includes/components/_navbar.scss';
+        @import 'includes/components/_demo.scss';
+        @import 'includes/components/_footer.scss';
+        @import 'includes/components/_error.scss';
+
+
+        .cards_container{
+            background-color: rgba(255,255,255,0.5);
+            padding:10px;
+            color:white;
+            text-shadow: 0 0 5px #333;
+            table{
+                background-color: white;
+                color: black;
+                text-shadow: 0 0 0 #333;
+            }
+            h1{
+                color: black;
+                text-shadow: 0 0 0 #333;
+                border-bottom: 1px solid white;
+                margin-bottom: 2rem;
+                padding-bottom: 1rem;
+            }
+            strong{
+                color: black;
+                text-shadow: 0 0 0 #333;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
