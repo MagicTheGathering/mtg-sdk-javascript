@@ -1,0 +1,37 @@
+@mixin background_theme($gender) {
+    @if($gender=='boy') {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,96d4ea+32,86ccb3+75,6dafff+100 */
+        /* Old browsers */
+        background: -moz-linear-gradient(45deg, #ffffff 0%, #96d4ea 32%, #86ccb3 75%, #6dafff 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #ffffff 0%, #96d4ea 32%, #86ccb3 75%, #6dafff 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #ffffff 0%, #96d4ea 32%, #86ccb3 75%, #6dafff 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#6dafff', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+    }
+    @else if($gender=='girl') {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5b3b5+33,db90d8+76,ff6d70+100 */
+        /* Old browsers */
+        background: -moz-linear-gradient(45deg, #ffffff 0%, #e5b3b5 33%, #db90d8 76%, #ff6d70 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #ffffff 0%, #e5b3b5 33%, #db90d8 76%, #ff6d70 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #ffffff 0%, #e5b3b5 33%, #db90d8 76%, #ff6d70 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ff6d70', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+    }
+    @else {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5b3b5+33,8188c4+77,6d81ff+100 */
+        background: -moz-linear-gradient(45deg, #ffffff 0%, #e5b3b5 33%, #8188c4 77%, #6d81ff 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #ffffff 0%, #e5b3b5 33%, #8188c4 77%, #6d81ff 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #ffffff 0%, #e5b3b5 33%, #8188c4 77%, #6d81ff 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#6d81ff', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+    }
+}

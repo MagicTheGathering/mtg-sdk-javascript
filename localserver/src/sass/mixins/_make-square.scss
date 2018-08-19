@@ -1,0 +1,9 @@
+@mixin make-square($widthHeight) {
+    width: $widthHeight;
+    height: $widthHeight;
+}
+
+@mixin width-height($w, $h) {
+    width: $w;
+    height: $h;
+}

@@ -1,0 +1,5 @@
+@mixin box-shadow($type, $distance, $color) {
+    -moz-box-shadow: $type 0 0 $distance $color;
+    -webkit-box-shadow: $type 0 0 $distance $color;
+    box-shadow: $type 0 0 $distance $color;
+}

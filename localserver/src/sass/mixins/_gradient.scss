@@ -1,0 +1,7 @@
+@mixin blueGradient() {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e1ffff+0,c8eefb+34,bee4f8+75,b1d8f5+100&1+0,0.55+100 */
+background: -moz-radial-gradient(center, ellipse cover, rgba(225,255,255,1) 0%, rgba(200,238,251,0.85) 34%, rgba(190,228,248,0.66) 75%, rgba(177,216,245,0.55) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover, rgba(225,255,255,1) 0%,rgba(200,238,251,0.85) 34%,rgba(190,228,248,0.66) 75%,rgba(177,216,245,0.55) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center, rgba(225,255,255,1) 0%,rgba(200,238,251,0.85) 34%,rgba(190,228,248,0.66) 75%,rgba(177,216,245,0.55) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1ffff', endColorstr='#8cb1d8f5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

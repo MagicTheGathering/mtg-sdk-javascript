@@ -1,0 +1,60 @@
+extends layout.pug
+
+block body_content
+    .container.cards_container
+        - let keys = Object.keys(card)
+        .col-xs-12
+                h1=`${card['name']}`
+        .row
+            .col-xs-12.col-md-3
+                img(src=`${card['imageUrl']}`)
+            .col-xs-12.col-md-8
+                each val in keys
+                    if val !== "imageUrl" && val !== "name" && val !== "rulings"
+                        if Array.isArray(card[val])
+                            if val === "legalities"
+                                .row
+                                    .col-xs-12.col-sm-2
+                                        p
+                                            strong= val
+                                    .col-xs-12.col-sm-10
+                                        table.table
+                                            thead
+                                                tr
+                                                    th= "Format"
+                                                    th= "Legality"
+                                            tbody
+                                                each v in card[val]
+                                                    tr
+                                                        td= v.format
+                                                        td= v.legality                                                          
+                            else
+                                .row
+                                    .col-xs-12.col-sm-2
+                                        p
+                                            strong= val
+                                    .col-xs-12.col-sm-10
+                                        ul
+                                            each v in card[val]
+                                                li=v
+                        else
+                            .row
+                                .col-xs-12.col-sm-2
+                                    p
+                                        strong= val
+                                .col-xs-12.col-sm-10
+                                    p= card[val]
+            if card["rulings"] !== undefined
+                .col-12
+                    h1= "Rulings"
+                .col-12
+                    table.table
+                        thead
+                            tr
+                                th(style="width: 150px;")= "Date"
+                                th= "Rule"
+                        tbody
+                            each v in card["rulings"]
+                                tr
+                                    td= v.date
+                                    td= v.text  

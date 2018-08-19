@@ -1,0 +1,14 @@
+.NavContainer
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    .container
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarMain', aria-controls='navbarMain', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarMain.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href='/')
+              span Home
+              span.sr-only
+        form.form-inline(action="/card" method="get")
+          input.form-control.mr-sm-2(name="id" type='text', placeholder='Enter Multiverse Id')
+          button.btn.btn-outline-success.my-2.my-sm-0(type='submit') View

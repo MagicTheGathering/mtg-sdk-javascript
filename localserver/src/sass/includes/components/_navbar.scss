@@ -1,0 +1,61 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$el: 1200px;
+$black: #222;
+$orange:#E28C36;
+.NavContainer {
+    border-bottom: 5px solid #005858;
+    .bg-dark {
+        background-image: url('http://www.ingham.org/Portals/_default/Skins/ingham/images/patternbg.png')
+    }
+    .nav-link {
+        color: white !important;
+        text-transform: uppercase;
+        font-weight: bolder;
+        &:hover {
+            color: $orange !important;
+        }
+    }
+    .navbar-brand{
+        width: 70%;
+        img{
+            width: 100%;
+            height:auto;
+            max-width: 410px;
+        }
+    }
+    .dropdown-toggle::before {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-right: 0.355em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: .3em solid;
+        border-right: .3em solid transparent;
+        border-bottom: 0;
+        border-left: .3em solid transparent;
+        color:$orange;
+    }
+    .dropdown-toggle::after {
+        content: "";
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    .dropdown-menu{
+        background-color:$black;
+        background-image: url('http://www.ingham.org/Portals/_default/Skins/ingham/images/patternbg.png');
+        .dropdown-item{
+            color:white;
+            padding-top:10px;
+            padding-bottom:10px;
+            &:hover{
+                color:$orange;
+                background-color:$black;
+            }
+        }
+    }
+}
