@@ -66,7 +66,7 @@ describe('card', () => {
       cardEmitter.on('data', card => results.push(card))
       cardEmitter.on('error', cb)
       cardEmitter.on('end', () => {
-        results.should.have.length(9)
+        results.should.have.length(10)
         cb()
       })
     })

@@ -50,11 +50,11 @@ describe('set', () => {
   describe('all', () => {
     it('should emit all results', (cb) => {
       const results = []
-      const setEmitter = set.all({ name: 'masters' })
+      const setEmitter = set.all({ name: 'urza' })
       setEmitter.on('data', set => results.push(set))
       setEmitter.on('error', cb)
       setEmitter.on('end', () => {
-        assert.equal(results.length, 10)
+        assert.equal(results.length, 3)
         cb()
       })
     })
