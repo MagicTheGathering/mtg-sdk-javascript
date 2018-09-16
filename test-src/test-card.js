@@ -38,7 +38,7 @@ describe('card', () => {
       return card.where({ supertypes: 'legendary', subtypes: 'goblin' })
         .should.eventually.be.an('array')
         .with.deep.property('[0]')
-          .that.has.property('supertypes[0]', 'Legendary')
+        .that.has.property('supertypes[0]', 'Legendary')
     })
 
     it('should return 1 page of results', () => {
