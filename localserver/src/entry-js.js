@@ -4,18 +4,16 @@
 /******************
  *   CSS Custom   *
  ******************/
-require("./sass/main.scss");
-require("./images/patternbg.png")
-require("./images/wallpaper.jpg")
+require('./sass/main.scss')
+require('./images/patternbg.png')
+require('./images/wallpaper.jpg')
 
 /********************
  *   JS Libraries   *
  ********************/
 
-
-require("./js/scripts/app.js");
-
+require('./js/scripts/app.js')
 
 if (module.hot) {
-  module.hot.accept();
+  module.hot.accept()
 }

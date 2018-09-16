@@ -34,15 +34,15 @@ module.exports = type => ({
     const emitter = new Emitter()
     const getEmit = (type, page, args) => {
       return get(type, page, args)
-      .then(items => {
-        if (items.length > 0) {
-          items.forEach(c => emitter.trigger('data', c))
-          return getEmit(type, page + 1, args) // RECURSION
-        } else {
-          emitter.trigger('end')
-        }
-      })
-      .catch(err => emitter.trigger('error', err))
+        .then(items => {
+          if (items.length > 0) {
+            items.forEach(c => emitter.trigger('data', c))
+            return getEmit(type, page + 1, args) // RECURSION
+          } else {
+            emitter.trigger('end')
+          }
+        })
+        .catch(err => emitter.trigger('error', err))
     }
     getEmit(type, 1, args)
 

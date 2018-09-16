@@ -11,7 +11,7 @@
   "license": "MIT",
   "scripts": {
     "build": "standard \"*src/**/*.js\" && babel src -s -d lib && babel test-src -s -d test && npm run test",
-    "watch": "nodemon -w src -w test-src -x 'npm run build'",
+    "watch": "nodemon -w src -w test-src -x npm run build",
     "test": "mocha -t 10000"
   },
   "devDependencies": {
