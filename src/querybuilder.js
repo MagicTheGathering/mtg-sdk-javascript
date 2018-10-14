@@ -40,7 +40,7 @@ module.exports = type => ({
             return getEmit(type, page + 1, args) // RECURSION
           } else {
             emitter.trigger('end')
-            return
+            return null
           }
         })
         .catch(err => emitter.trigger('error', err))
