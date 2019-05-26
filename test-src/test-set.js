@@ -31,18 +31,16 @@ describe('set', () => {
         assert.equal(set.code, 'SOI')
         assert.equal(set.name, 'Shadows over Innistrad')
         assert.equal(set.type, 'expansion')
-        assert.equal(set.border, 'black')
         assert.equal(set.releaseDate, '2016-04-08')
-        assert.equal(set.block, 'Shadows over Innistrad')
+        assert.equal(set.block, 'Shadows Over Innistrad')
       }))
     })
   })
 
   describe('where', () => {
     it('should filter', () => {
-      return set.where({ border: 'black', name: 'Shadows over Innistrad' }).then(result => {
-        assert.deepEqual(result[0].border, 'black')
-        assert.deepEqual(result[0].name, 'Shadows over Innistrad')
+      return set.where({ name: 'Shadows over Innistrad' }).then(result => {
+        assert.deepEqual(result[0].name, 'Shadows over Innistrad Promos')
       })
     })
   })

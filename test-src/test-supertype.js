@@ -16,7 +16,7 @@ describe('supertype', () => {
       supertypeEmitter.on('data', supertype => results.push(supertype))
       supertypeEmitter.on('error', cb)
       supertypeEmitter.on('end', () => {
-        results.should.have.length(5)
+        results.should.have.length.of.at.least(5) // length at time of test
         cb()
       })
     })

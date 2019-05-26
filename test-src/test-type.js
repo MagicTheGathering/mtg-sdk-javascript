@@ -16,7 +16,7 @@ describe('type', () => {
       typeEmitter.on('data', type => results.push(type))
       typeEmitter.on('error', cb)
       typeEmitter.on('end', () => {
-        results.should.have.length(14)
+        results.should.have.length.of.at.least(14) // length at time of test
         cb()
       })
     })
