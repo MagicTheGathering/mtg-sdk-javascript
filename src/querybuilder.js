@@ -3,11 +3,11 @@ const config = require('./config.js')
 const { curryN, merge, prop } = require('ramda')
 const Emitter = require('emitter20')
 
-const get = curryN(3, (type, page, args) => {
+const get = curryN(3, (type, page, args = {}) => {
   return request({
     uri: `${config.endpoint}/${type}`,
     qs: merge(args, {
-      page
+      page: args.page || page
     }),
     json: true
   }).then(prop(type))
