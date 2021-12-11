@@ -2,7 +2,7 @@
 const chai = require('chai')
 chai.should()
 
-const { card } = require('../lib/index.js')
+const { card } = require('../index.js')
 
 describe('card', () => {
   describe('find', () => {

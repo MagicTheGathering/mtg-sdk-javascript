@@ -5,7 +5,7 @@ const chaiAsPromised = require('chai-as-promised')
 chai.should()
 chai.use(chaiAsPromised)
 
-const { type } = require('../lib/index.js')
+const { type } = require('../index.js')
 
 describe('type', () => {
   describe('all', () => {

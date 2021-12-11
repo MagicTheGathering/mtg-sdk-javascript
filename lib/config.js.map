@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/config.js"],"names":["module","exports","endpoint"],"mappings":";;AAAAA,OAAOC,OAAP,GAAiB;AACfC,YAAU;AADK,CAAjB","file":"config.js","sourcesContent":["module.exports = {\n  endpoint: 'https://api.magicthegathering.io/v1'\n}\n"]}

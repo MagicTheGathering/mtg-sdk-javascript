@@ -2,7 +2,7 @@
 const chai = require('chai')
 const assert = chai.assert
 
-const { set } = require('../lib/index.js')
+const { set } = require('../index.js')
 const { pipe, prop } = require('ramda')
 
 describe('set', () => {

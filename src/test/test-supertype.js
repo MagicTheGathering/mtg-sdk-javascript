@@ -5,7 +5,7 @@ const chaiAsPromised = require('chai-as-promised')
 chai.should()
 chai.use(chaiAsPromised)
 
-const { supertype } = require('../lib/index.js')
+const { supertype } = require('../index.js')
 
 describe('supertype', () => {
   describe('all', () => {
