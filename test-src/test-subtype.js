@@ -16,7 +16,7 @@ describe('subtype', () => {
       subtypeEmitter.on('data', subtype => results.push(subtype))
       subtypeEmitter.on('error', cb)
       subtypeEmitter.on('end', () => {
-        results[0].should.equal('Advisor')
+        results[0].should.equal('Abian')
         results.should.have.length.of.at.least(377) // length at time of test
         cb()
       })
