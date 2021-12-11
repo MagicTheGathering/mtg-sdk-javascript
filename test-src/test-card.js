@@ -1,60 +1,59 @@
 /* global describe, it */
 const chai = require('chai')
-const chaiAsPromised = require('chai-as-promised')
 chai.should()
-chai.use(chaiAsPromised)
 
 const { card } = require('../lib/index.js')
-const { pipe, prop } = require('ramda')
 
 describe('card', () => {
   describe('find', () => {
-    it('returns card', () => {
-      return card.find(88803).then(pipe(prop('card'), card => {
-        card.should.have.property('id')
-        card.should.have.property('name', 'Choice of Damnations')
-        card.should.have.property('manaCost', '{5}{B}')
-        card.should.have.property('cmc', 6)
-        card.should.have.property('type', 'Sorcery — Arcane')
-        card.should.have.deep.property('colors[0]', 'Black')
-        card.should.have.deep.property('types[0]', 'Sorcery')
-        card.should.have.deep.property('subtypes[0]', 'Arcane')
-        card.should.have.property('rarity', 'Rare')
-        card.should.have.property('set', 'SOK')
-        card.should.have.property('text', 'Target opponent chooses a number. You may have that player lose that much life. If you don\'t, that player sacrifices all but that many permanents.')
-        card.should.have.property('flavor', '"Life is a series of choices between bad and worse."\n—Toshiro Umezawa')
-        card.should.have.property('artist', 'Tim Hildebrandt')
-        card.should.have.property('number', '62')
-        card.should.have.property('multiverseid', '88803')
-        card.should.have.property('imageUrl', 'http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=88803&type=card')
-        card.should.have.property('originalText', 'Target opponent chooses a number. You may have that player lose that much life. If you don\'t, that player sacrifices all but that many permanents.')
-        card.should.have.property('originalType', 'Sorcery - Arcane')
-      }))
+    it('returns card', async () => {
+      const result = await card.find(88803)
+      result.card.should.have.property('id')
+      result.card.should.have.property('name', 'Choice of Damnations')
+      result.card.should.have.property('manaCost', '{5}{B}')
+      result.card.should.have.property('cmc', 6)
+      result.card.should.have.property('type', 'Sorcery — Arcane')
+      result.card.should.have.nested.property('colors[0]', 'Black')
+      result.card.should.have.nested.property('types[0]', 'Sorcery')
+      result.card.should.have.nested.property('subtypes[0]', 'Arcane')
+      result.card.should.have.property('rarity', 'Rare')
+      result.card.should.have.property('set', 'SOK')
+      result.card.should.have.property('text', 'Target opponent chooses a number. You may have that player lose that much life. If you don\'t, that player sacrifices all but that many permanents.')
+      result.card.should.have.property('flavor', '"Life is a series of choices between bad and worse."\n—Toshiro Umezawa')
+      result.card.should.have.property('artist', 'Tim Hildebrandt')
+      result.card.should.have.property('number', '62')
+      result.card.should.have.property('multiverseid', '88803')
+      result.card.should.have.property('imageUrl', 'http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=88803&type=card')
+      result.card.should.have.property('originalText', 'Target opponent chooses a number. You may have that player lose that much life. If you don\'t, that player sacrifices all but that many permanents.')
+      result.card.should.have.property('originalType', 'Sorcery - Arcane')
     })
   })
 
   describe('where', () => {
-    it('should filter', () => {
-      return card.where({ supertypes: 'legendary', subtypes: 'goblin' })
-        .should.eventually.be.an('array')
-        .with.deep.property('[0]')
-        .that.has.property('supertypes[0]', 'Legendary')
+    it('should filter', async () => {
+      const result = await card.where({ supertypes: 'legendary', subtypes: 'goblin' })
+      result
+        .should.be.an('array')
+        .with.nested.property('[0]')
+        .that.has.nested.property('supertypes[0]', 'Legendary')
     })
 
-    it('should return 1 page of results', () => {
-      return Promise.all([
-        card.where({})
-          .should.eventually.be.an('array')
-          .that.has.length(100),
-        card.where({ page: 1 })
-          .should.eventually.be.an('array')
-          .that.has.length(100)
-      ])
+    it('should return 1 page of results', async () => {
+      const result1 = await card.where({})
+      result1
+        .should.be.an('array')
+        .that.has.length(100)
+
+      const result2 = await card.where({ page: 1 })
+      result2
+        .should.be.an('array')
+        .that.has.length(100)
     })
 
-    it('should be able to control the page size', () => {
-      return card.where({ page: 1, pageSize: 1 })
-        .should.eventually.be.an('array')
+    it('should be able to control the page size', async () => {
+      const result = await card.where({ page: 1, pageSize: 1 })
+      result
+        .should.be.an('array')
         .that.has.length(1)
     })
   })
