@@ -13,7 +13,7 @@ describe('card', () => {
       result.card.should.have.property('manaCost', '{5}{B}')
       result.card.should.have.property('cmc', 6)
       result.card.should.have.property('type', 'Sorcery — Arcane')
-      result.card.should.have.nested.property('colors[0]', 'Black')
+      result.card.should.have.nested.property('colors[0]', 'B')
       result.card.should.have.nested.property('types[0]', 'Sorcery')
       result.card.should.have.nested.property('subtypes[0]', 'Arcane')
       result.card.should.have.property('rarity', 'Rare')
