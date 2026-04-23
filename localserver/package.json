@@ -74,7 +74,7 @@
     "stats-webpack-plugin": "^0.6.1",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
-    "uuid": "^3.0.1",
+    "uuid": "^14.0.0",
     "webpack": "^3.10.0",
     "webpack-dev-middleware": "^2.0.1",
     "webpack-dev-server": "^4.11.1",
